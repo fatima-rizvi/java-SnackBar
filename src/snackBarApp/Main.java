@@ -3,22 +3,25 @@ package snackBarApp;
 public class Main {
   public static void main(String[] args) {
 
-    Customer c1 = new Customer("Jane", 45.25);
-    Customer c2 = new Customer("Bob", 33.14);
+    Customer jane = new Customer("Jane", 45.25);
+    Customer bob = new Customer("Bob", 33.14);
 
-    VendingMachine v1 = new VendingMachine("Food");
-    VendingMachine v2 = new VendingMachine("Drink");
-    VendingMachine v3 = new VendingMachine("Office");
+    System.out.println(jane.getName() + " cash on hand " + jane.getCashOnHand());
 
-    Snack s1 = new Snack("Chips", 1.75, v1.getId(), 36);
-    Snack s2 = new Snack("Chocolate Bar", 1.00, v1.getId(), 36);
-    Snack s3 = new Snack("Pretzel", 2.00, v1.getId(), 30);
+    VendingMachine food = new VendingMachine("Food");
+    VendingMachine drink = new VendingMachine("Drink");
+    VendingMachine office = new VendingMachine("Office");
 
-    Snack s4 = new Snack("Soda", 2.50, v2.getId(), 24);
-    Snack s5 = new Snack("Water", 2.75, v2.getId(), 20);
+    // (String name, int quantity, double cost, int vendingMachId)
+    Snack chips = new Snack("Chips", 36, 1.75, food.getId());
+    Snack chocolate = new Snack("Chocolate Bar", 36, 1.00, food.getId());
+    Snack pretzel = new Snack("Pretzel", 30, 2.00, food.getId());
+
+    Snack soda = new Snack("Soda", 24, 2.50, drink.getId());
+    Snack water = new Snack("Water", 20, 2.75, drink.getId());
 
     //output
-    System.out.println(s1.toString());
+
   }
 
 }

@@ -5,7 +5,7 @@ public class VendingMachine {
   private int id;
   private String name;
 
-  public VendingMachine(int id, String name) {
+  public VendingMachine(String name) {
     maxId++;
     this.id = maxId;
     this.name = name;
